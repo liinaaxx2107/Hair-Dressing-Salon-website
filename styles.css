@@ -27,7 +27,7 @@ body{
 .nav-toggle{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;}
 
 .hero{
-  background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.25)), url('https://picsum.photos/seed/hero/1600/600');
+  background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.25)), url('images/louis-hansel-n_pzLOjR_C8-unsplash.jpg');
   background-size:cover;
   background-position:center;
   padding:48px 0;
