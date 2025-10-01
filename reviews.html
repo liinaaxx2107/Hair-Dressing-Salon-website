@@ -3,13 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Reviews</title>
-  <meta name="description" content="Lovely Hair — cozy hair salon: haircuts, coloring, styling. Book online." />
+  <title>Lovely Hair Reviews & Gallery</title>
+  <meta name="description" content="Lovely Hair — cozy hair salon: customer reviews and gallery of our work." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
+
+  .hero h1 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+  font-size: 5rem;
+  font-weight: 600;  
+}
+
     body {
-      background-color: #f7b9c4; /* нежно-розовый фон - Light Pink Background */
+      background-color: #f7ede6;
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
@@ -22,136 +36,118 @@
     .hero {
       padding: 80px 0;
       text-align: center;
-      background-color: #f7b9c4; /* светлый розовый блок для героя - Light Pink BG */
+      background-color: #f7ede6;
     }
 
     .section {
       padding: 60px 0;
     }
 
-    .cards {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .card {
-      background-color: #f7b9c4;
+    .reviews {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background-color: #fff;
       padding: 20px;
       border-radius: 10px;
-      flex: 1 1 250px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .review-card p {
+      margin: 0 0 10px 0;
+      font-style: italic;
+    }
+
+    .review-card .author {
+      font-weight: 600;
+      text-align: right;
     }
 
     .gallery-grid {
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .gallery-grid img {
       width: 100%;
       max-width: 300px;
       border-radius: 10px;
-    }
-
-    .btn-primary {
-      background-color: #f7b9c4;
-      color: white;
-      padding: 10px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 10px;
+      object-fit: cover;
     }
 
     .site-footer {
       text-align: center;
       padding: 20px 0;
-      background-color: #f7b9c4;
+      background-color: #f7ede6;
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container">
-      <div class="logo"><span class="logo-cursive">Lovely</span> Hair</div>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
     </nav>
 
     <div class="hero">
       <div class="hero-content container">
-        <h1>Welcome to Lovely Hair</h1>
-        <p>Gentle cuts, warm atmosphere and true hair care.</p>
-        <a href="#contact" class="btn-primary">Book Now</a>
+        <h1>Lovely Hair Reviews & Gallery</h1>
+        <p>See what our customers say and browse our latest work!</p>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="services" class="section services container">
-      <h2>Our Services</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Haircuts</h3>
-          <p>Women’s haircuts — tailored to your individuality.</p>
+    <section id="reviews" class="section reviews-section container">
+      <h2>Customer Reviews</h2>
+      <div class="reviews">
+        <div class="review-card">
+          <p>"Absolutely love my new haircut! The team is so friendly and professional."</p>
+          <div class="author">— Emily R.</div>
         </div>
-        <div class="card">
-          <h3>Coloring</h3>
-          <p>Balayage, highlights, ombre — safe techniques with gentle care.</p>
+        <div class="review-card">
+          <p>"The balayage turned out perfect! Highly recommend Lovely Hair."</p>
+          <div class="author">— Sarah M.</div>
         </div>
-        <div class="card">
-          <h3>Styling</h3>
-          <p>Daily and festive styling: curls, braids, and retro looks.</p>
+        <div class="review-card">
+          <p>"Cozy atmosphere and amazing styling. I always leave happy!"</p>
+          <div class="author">— Mia K.</div>
         </div>
       </div>
     </section>
 
     <section id="gallery" class="section gallery container">
-  <h2>Gallery</h2>
-  <div class="gallery-grid">
-    <img src="images/jessie-dee-dabrowski-www-jessiedee-net-W6cwaL7PMSw-unsplash.jpg" alt="Work example 1">
-    <img src="images/pia-rohrer-k25Pu1i5TOU-unsplash.jpg" alt="Work example 2">
-    <img src="images/oktavianus-mulyadi-0LUGSiyIGnc-unsplash.jpg" alt="Work example 3">
-  </div>
-</section>
-
-    <section id="about" class="section about container">
-      <h2>About Us</h2>
-      <p>We are a small cozy salon. Gentle approach to hair, experienced stylists and personalized consultations. Come and let’s create your perfect look together.</p>
-    </section>
-
-    <section id="contact" class="section contact container">
-      <h2>Contact</h2>
-      <p>Address: Abbey Street, 10<br>Phone: <a href="tel:+353800000000">+353 80 000 0000</a><br>Email: info@lovelyhair.com</p>
-
-      <form id="contactForm" class="contact-form">
-        <label>Name
-          <input type="text" name="name" required>
-        </label>
-        <label>Phone
-          <input type="tel" name="phone" required>
-          </label>
-        <label>Message
-          <textarea name="message" rows="4"></textarea>
-        </label>
-        <button type="submit" class="btn-primary">Send</button>
-      </form>
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://kao-h.assetsadobe3.com/is/image/content/dam/sites/kaousa/www-johnfrieda-com/uk/en/blog-images/Woman%20with%20freckles%20and%20volumised%20auburn%20bob.jpg?fmt=jpeg&qlt=85&wid=1680" alt="Work example 1">
+        <img src="https://d3sc42dkmius1e.cloudfront.net/media/1708524316differences_between_barber_mens_hairdressersquare.jpg" alt="Work example 2">
+        <img src="https://thumbs.dreamstime.com/b/cheerful-funny-blond-girl-hair-curlers-rollers-haidresser-beauty-salon-portrait-happy-woman-hairdresser-hairstyle-36928838.jpg" alt="Work example 3">
+        <img src="https://media.istockphoto.com/id/539207297/photo/senior-african-american-woman-at-the-park.jpg?s=612x612&w=0&k=20&c=iMx3TpthowfocvuyFi-_Qp4HdRA4XRUzrgDU-4DcWAs=" alt="Work example 4">
+        <img src="https://media.tenor.com/oplKo5-xd0YAAAAM/kagat-nguso.gif" alt="Work example 5">
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Lovely Hair — All rights reserved</p>
+      <p><span id="year"></span> Lovely Hair — All rights reserved</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>
+</html> 
