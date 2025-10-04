@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enchanted Locks - Advice</title>
+  <meta name="description" content="Hair advice page for the Enchanted Locks hair salon." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: #ffe4e6; /* нежно-розовый фон - Light Pink Background */
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo-cursive {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+      background-color: #ffdce0; /* светлый розовый блок для героя - Light Pink BG */
+      background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.25)), url('images/caesar-akbar-0dhhHEKCyes-unsplash.jpg') !important;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #fff0f2;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .gallery-grid {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .btn-primary {
+      background-color: #ff8da1;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #ffdce0;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="logo"><span class="logo-cursive">Enchanted</span> Locks</div>
+      <ul class="nav-links">
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-content container">
+        <h1>Hair Advice</h1>
+        <p style="text-shadow: 1px 1px 0 var(--accent); color: darkslategrey;">From straight hair, to curly hair, to <i>no</i> hair, we've got you covered.</p>
+        <a href="#contact" class="btn-primary-variant2">Find Out More</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="services" class="section services container">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>placeholder title</h3>
+          <p>placeholder subtitle</p>
+        </div>
+        <div class="card">
+          <h3>placeholder title</h3>
+          <p>placeholder subtitle</p>
+        </div>
+        <div class="card">
+          <h3>placeholder title</h3>
+          <p>placeholder subtitle</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery container">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="404" alt="Advice Image 1">
+    <img src="404" alt="Advice Image  2">
+    <img src="404" alt="Advice Image  3">
+  </div>
+</section>
+
+    <section id="about" class="section about container">
+      <h2>About Us</h2>
+      <p>We are a small cozy salon. Gentle approach to hair, experienced stylists and personalized consultations. Come and let's create your perfect look together.</p>
+    </section>
+
+    <section id="contact" class="section contact container">
+      <h2>Contact</h2>
+      <p>Address: Abbey Street, 10<br>Phone: <a href="tel:+353800000000">+353 80 000 0000</a><br>Email: info@enchantedlocks.ie</p>
+
+      <form id="contactForm" class="contact-form">
+        <label>Name
+          <input type="text" name="name" required>
+        </label>
+        <label>Phone
+          <input type="tel" name="phone" required>
+          </label>
+        <label>Message
+          <textarea name="message" rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn-primary">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Enchanted Locks - All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
