@@ -3,156 +3,115 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
-  <title>Enchanted Locks - Hair Salon</title>
+  <title>Enchanted Locks-Hair Salon</title>
   <meta name="description" content="Enchanted Locks - cozy hair salon: haircuts, coloring, styling. Book online." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      background-color: #ffe4e6; /* нежно-розовый фон - Light Pink Background */
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .logo-cursive {
-      font-family: 'Great Vibes', cursive;
-    }
-
-    .hero {
-      padding: 80px 0;
-      text-align: center;
-      background-color: #ffdce0; /* светлый розовый блок для героя - Light Pink BG */
-    }
-
-    .section {
-      padding: 60px 0;
-    }
-
-    .cards {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background-color: #fff0f2;
-      padding: 20px;
-      border-radius: 10px;
-      flex: 1 1 250px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .gallery-grid {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-    }
-
-    .btn-primary {
-      background-color: #ff8da1;
-      color: white;
-      padding: 10px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    .site-footer {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #ffdce0;
-    }
-  </style>
+  <!-- readable body for dyslexia and cursive for logo -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
+  <!-- Keyboard/screen reader -->
+
+  <header class="site-header" role="banner">
+    <nav class="nav container" role="navigation" aria-label="Main">
       <div class="logo"><span class="logo-cursive">Enchanted</span> Locks</div>
-      <ul class="nav-links">
+      <!--Buttons for the user-->
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+<!--Option to turn on or turn off the dyslexia mode-->
+      <div class="toggles">
+        <button class="toggle-btn" id="rulerToggle" aria-pressed="false" aria-label="Toggle reading ruler">Reading ruler</button>
+        <button class="toggle-btn" id="dysToggle" aria-pressed="false" aria-label="Toggle dyslexia mode">Dyslexia mode</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
     </nav>
-
+<!--General info-->
     <div class="hero">
-      <div class="hero-content container">
+      <div class="hero-content container content">
         <h1>Welcome to Enchanted Locks</h1>
-        <p>Gentle cuts, warm atmosphere and true hair care.</p>
+        <p>Gentle cuts, cozy atmosphere and true hair care all in once.</p>
         <a href="#contact" class="btn-primary">Book Now</a>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main" class="content" role="main">
     <section id="services" class="section services container">
       <h2>Our Services</h2>
-      <div class="cards">
-        <div class="card">
+      <p>Book appointments with us without any stress through our website.</p>
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
           <h3>Haircuts</h3>
-          <p>Women's haircuts - tailored to your individuality.</p>
-        </div>
-        <div class="card">
+          <p>Women's haircuts-pop your individuality.</p>
+        </article>
+        <article class="card" role="listitem">
           <h3>Coloring</h3>
-          <p>Balayage, highlights, ombre - safe techniques with gentle care.</p>
-        </div>
-        <div class="card">
+          <p>Balayage, highlights, ombre-gentle techniques with care.</p>
+        </article>
+        <article class="card" role="listitem">
           <h3>Styling</h3>
-          <p>Daily and festive styling: curls, braids, and retro looks.</p>
-        </div>
+          <p>Daily and festive styling such as: curls, braids, and retro looks that are made fast and perfect.</p>
+        </article>
+      </div>
+    </section>
+<!--Examples of haircuts updated-->
+    <section id="gallery" class="section gallery container">
+      <h2>Gallery</h2>
+      <div class="gallery-grid" role="list">
+        <img role="listitem" src="images/jessie-dee-dabrowski-www-jessiedee-net-W6cwaL7PMSw-unsplash.jpg" alt="Soft layered haircut example">
+        <img role="listitem" src="images/pia-rohrer-k25Pu1i5TOU-unsplash.jpg" alt="Coloring result: warm balayage">
+        <img role="listitem" src="images/oktavianus-mulyadi-0LUGSiyIGnc-unsplash.jpg" alt="Curly styling for event">
       </div>
     </section>
 
-    <section id="gallery" class="section gallery container">
-  <h2>Gallery</h2>
-  <div class="gallery-grid">
-    <img src="images/jessie-dee-dabrowski-www-jessiedee-net-W6cwaL7PMSw-unsplash.jpg" alt="Work example 1">
-    <img src="images/pia-rohrer-k25Pu1i5TOU-unsplash.jpg" alt="Work example 2">
-    <img src="images/oktavianus-mulyadi-0LUGSiyIGnc-unsplash.jpg" alt="Work example 3">
-  </div>
-</section>
-
     <section id="about" class="section about container">
       <h2>About Us</h2>
-      <p>We are a small cozy salon. Gentle approach to hair, experienced stylists and personalized consultations. Come and let's create your perfect look together.</p>
+      <p>We are a small cozy salon. Gentle approach to hair, experienced stylists and personalized consultations. Come and let's create your perfect look together!.</p>
     </section>
 
     <section id="contact" class="section contact container">
       <h2>Contact</h2>
-      <p>Address: Abbey Street, 10<br>Phone: <a href="tel:+353800000000">+353 80 000 0000</a><br>Email: info@enchantedlocks.ie</p>
+      <address class="content" style="font-style: normal;">
+        Address: Abbey Street, 10<br>
+        Phone: <a href="tel:+35386210007">+353 86 210 0007</a><br>
+        Email: <a href="mailto:info@enchantedlocks.ie">info@enchantedlocks.ie</a>
+      </address>
+<!--Booking with the hairstylist-->
+      <form id="contactForm" class="contact-form" novalidate aria-describedby="formHelp">
+        <label for="name">Name
+          <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" />
+        </label>
 
-      <form id="contactForm" class="contact-form">
-        <label>Name
-          <input type="text" name="name" required>
+        <label for="phone">Phone
+          <input type="tel" id="phone" name="phone" required aria-required="true" inputmode="tel" autocomplete="tel" />
         </label>
-        <label>Phone
-          <input type="tel" name="phone" required>
-          </label>
-        <label>Message
-          <textarea name="message" rows="4"></textarea>
+
+        <label for="message">Message
+          <textarea id="message" name="message" rows="4" aria-describedby="msgHelp"></textarea>
         </label>
+
+        <p class="help" id="formHelp">We’ll call you back to confirm details.</p>
+        <p class="help" id="msgHelp">Optional. Tell us a preferred time or service.</p>
+
         <button type="submit" class="btn-primary">Send</button>
       </form>
     </section>
   </main>
-
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p>© <span id="year"></span> Enchanted Locks - All rights reserved</p>
+      <p>© <span id="year"></span> Enchanted Locks—All rights reserved</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-</body>
+  <!-- Reading ruler overlay -->
+  <div class="reading-ruler" id="ruler" aria-hidden="true"></div>
 
+  <script src="scripts/script.js"></script>
+</body>
 </html>
