@@ -67,7 +67,12 @@ body{
 .card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.06);flex:1;min-width:220px;}
 
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;}
-.gallery-grid img{width:100%;height:auto;border-radius:10px;display:block;}
+.gallery-grid img{width:100%;
+                  max-width:300px;
+                  height:300px;
+                  object-fit:cover;
+                  border-radius:10px;
+                  display:block;}
 
 .contact-form{display:flex;flex-direction:column;gap:10px;margin-top:12px;max-width:480px;}
 .contact-form label{font-size:0.95rem;display:flex;flex-direction:column;gap:6px;}
@@ -168,6 +173,7 @@ input,textarea{padding:10px;border-radius:8px;border:1px solid #eee;background:w
   line-height: 1.8;
   transition: 0.3s ease;
 }
+
 
 
 
