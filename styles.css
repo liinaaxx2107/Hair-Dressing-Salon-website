@@ -132,6 +132,42 @@ input,textarea{padding:10px;border-radius:8px;border:1px solid #eee;background:w
   line-height: 1.7;
   text-align: center;
 }  
+/* Price List */
+.price-list {
+  background: #fff0f2;
+  border: 1px solid #ffd4dc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.price-list h2 {
+  text-align: center;
+  color: #ff6f91;
+}
+
+.price-items {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.price-items li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #ffc7d1;
+  padding: 6px 0;
+}
+
+.price-list.dyslexia {
+  background: #ffe8ee;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  transition: 0.3s ease;
+}
 
 
 
