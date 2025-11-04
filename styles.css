@@ -269,5 +269,60 @@ nav a {
   .contact-card h2 { font-size: 1.6rem; }
   .contact-actions { justify-content: center; }
 }
+/* ===== Shared accent from teammate (#F45B69) ===== */
+:root { --accent:#F45B69; }
+
+/* About page header */
+.about-header {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin: 0 0 10px;
+  color: #111;
+}
+
+.about-header p {
+  font-size: 1.25rem;
+  color: #555;
+  margin: 0;
+}
+
+/* About content card */
+.about-card {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  text-align: left;
+  background-color: #fff0f2;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+/* about card */
+.about-card h2 {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin: 40px 0 20px 0;
+  font-size: 2rem;
+  background-color: var(--accent);
+  color: #333; /* compability */
+}
+
+/* Nav bar */
+.nav {
+  background-color: var(--accent);
+  border-radius: 12px;
+  padding: 10px 16px;
+}
+
+/* adaptive */
+@media (max-width: 768px) {
+  .about-header h1 { font-size: 2.2rem; }
+  .about-card h2 { font-size: 1.6rem; }
+}
 
 
