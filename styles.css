@@ -127,5 +127,11 @@ input,textarea{padding:10px;border-radius:8px;border:1px solid #eee;background:w
 .nav-links li {
   list-style: none;
 }
+.hours p {
+  font=size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
+}  
+
 
 
