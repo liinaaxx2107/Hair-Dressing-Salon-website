@@ -2,19 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <!--Zoom in mobile mode is changed -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>Enchanted Locks — Hair Salon</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enchanted Locks—Hair Salon</title>
   <meta name="description" content="Enchanted Locks — cozy hair salon: haircuts, coloring, styling. Book online." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-</head>
+  <style>
+    body {
+      background-color: #ffe4e6; /* pink background */
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
+    .logo-cursive {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+      background-color: #ffdce0; 
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #fff0f2;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .gallery-grid {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .btn-primary {
+      background-color: #ff8da1;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #ffdce0;
+    }
+  </style>
+</head>
 <body>
-  <!-- HEADER -->
   <header class="site-header">
     <nav class="nav container">
-      <div class="logo"><span class="logo-cursive">Enchanted</span> Locks</div>
+      <div class="logo"><span class="logo-cursive"> Enchated </span> Locks </div>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -33,19 +94,17 @@
     </div>
   </header>
 
-  <!-- MAIN -->
   <main>
-    <!-- SERVICES -->
     <section id="services" class="section services container">
       <h2>Our Services</h2>
       <div class="cards">
         <div class="card">
           <h3>Haircuts</h3>
-          <p>Women’s haircuts—tailored to your individuality.</p>
+          <p>Women’s haircuts — tailored to your individuality.</p>
         </div>
         <div class="card">
           <h3>Coloring</h3>
-          <p>Balayage, highlights, ombre—safe techniques with gentle care.</p>
+          <p>Balayage, highlights, ombre — safe techniques with gentle care.</p>
         </div>
         <div class="card">
           <h3>Styling</h3>
@@ -54,38 +113,31 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
     <section id="gallery" class="section gallery container">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="https://i.pinimg.com/originals/2I/4q/T6/2I4qT6IN6.jpg" alt="Work example 1">
-        <img src="https://i.pinimg.com/originals/28/3d/iA/283diAZMR.jpg" alt="Work example 2">
-        <img src="https://i.pinimg.com/originals/1J/2u/Ct/1J2uCtslj.jpg" alt="Work example 3">
-      </div>
-    </section>
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="https://studio312salon.com/wp-content/uploads/2023/06/wpic2-1229x1536.jpg" alt="Work example 1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2u5rJPISnB7I2p_Ilb9ync5lQmbjiuhWW_COgjiUgnH7i3iBo_Iqx4vRH&s=10" alt="Work example 2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSoAxJT2zX8dwYPS-jmQlUHeAyvY8L-lxdkTVunwuSl1d3CiBNFMGKJPQK&s=10" alt="Work example 3">
+  </div>
+</section>
 
-    <!-- ABOUT -->
     <section id="about" class="section about container">
       <h2>About Us</h2>
       <p>We are a small cozy salon. Gentle approach to hair, experienced stylists and personalized consultations. Come and let’s create your perfect look together.</p>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="section contact container">
       <h2>Contact</h2>
-      <p>
-        Address: Abney Street, 10<br>
-        Phone: <a href="tel:+353800000000">+353 80 000 0000</a><br>
-        Email: info@enchantedlocks.com
-      </p>
+      <p>Address: Abbey Street, 10<br>Phone: <a href="tel:+353800000000">+353 80 000 0000</a><br>Email: info@lovelyhair.com</p>
 
       <form id="contactForm" class="contact-form">
         <label>Name
           <input type="text" name="name" required>
         </label>
         <label>Phone
-          <input type="tel" name="phone">
-        </label>
+          <input type="tel" name="phone" required>
+          </label>
         <label>Message
           <textarea name="message" rows="4"></textarea>
         </label>
@@ -94,13 +146,13 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Enchanted Locks — All rights reserved</p>
+      <p>© <span id="year"></span> Enchanted Hair — All rights reserved</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
