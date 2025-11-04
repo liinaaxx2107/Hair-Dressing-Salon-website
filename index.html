@@ -181,8 +181,14 @@
   </footer>
 
   <script src="script.js"></script>
+    <script>
+document.getElementById('dyslexiaMode').addEventListener('change', e=>{
+  document.querySelector('.price-list').classList.toggle('dyslexia', e.target.checked);
+});
+</script>
 </body>
 </html>
+
 
 
 
