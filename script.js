@@ -27,4 +27,28 @@ form.addEventListener('submit', function(e){
   alert('Thank you! We received your request. (Demo only — connect to email service later.)');
   this.reset();
 });
+// === Smooth scroll for internal page sections ===
+// (Helps with readability and navigation comfort)
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (event) => {
+    const targetID = link.getAttribute('href');
+    const targetElement = document.querySelector(targetID);
+
+    if (targetElement) {
+      event.preventDefault();
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Close mobile nav if open
+      const nav = document.querySelector('.nav-links');
+      if (nav && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+      }
+
+      // Update the URL without jumping
+      history.replaceState(null, '', targetID);
+    }
+  });
+});
+
 
