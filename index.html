@@ -2,116 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
-  <title>Enchanted Locks-Hair Salon</title>
-  <meta name="description" content="Enchanted Locks - cozy hair salon: haircuts, coloring, styling. Book online." />
-  <!-- readable body for dyslexia and cursive for logo -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enchanted Locks—Hair Salon</title>
+  <meta name="description" content="Enchanted Locks — cozy hair salon: haircuts, coloring, styling. Book online." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: #ffe4e6; /* pink background */
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo-cursive {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+      background-color: #ffdce0; 
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #fff0f2;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .gallery-grid {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .btn-primary {
+      background-color: #ff8da1;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #ffdce0;
+    }
+  </style>
 </head>
 <body>
-  <!-- Keyboard/screen reader -->
-
-  <header class="site-header" role="banner">
-    <nav class="nav container" role="navigation" aria-label="Main">
-      <div class="logo"><span class="logo-cursive">Enchanted</span> Locks</div>
-      <!--Buttons for the user-->
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="logo"><span class="logo-cursive"> Enchated </span> Locks </div>
+      <ul class="nav-links">
+        <li><a class="btn btn--nav" href="#services">Services</a></li>
+        <li><a class="btn btn--nav" href="#gallery">Gallery</a></li>
+        <li><a class="btn btn--nav" href="#about">About</a></li>
+        <li><a class="btn btn--nav" href="#contact">Contact</a></li>
       </ul>
-<!--Option to turn on or turn off the dyslexia mode-->
-      <div class="toggles">
-        <button class="toggle-btn" id="rulerToggle" aria-pressed="false" aria-label="Toggle reading ruler">Reading ruler</button>
-        <button class="toggle-btn" id="dysToggle" aria-pressed="false" aria-label="Toggle dyslexia mode">Dyslexia mode</button>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
-      </div>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
     </nav>
-<!--General info-->
+
     <div class="hero">
-      <div class="hero-content container content">
+      <div class="hero-content container">
         <h1>Welcome to Enchanted Locks</h1>
-        <p>Gentle cuts, cozy atmosphere and true hair care all in once.</p>
+        <p>Gentle cuts, warm atmosphere and true hair care.</p>
         <a href="#contact" class="btn-primary">Book Now</a>
       </div>
     </div>
   </header>
 
-  <main id="main" class="content" role="main">
+  <main>
     <section id="services" class="section services container">
       <h2>Our Services</h2>
-      <p>Book appointments with us without any stress through our website.</p>
-      <div class="cards" role="list">
-        <article class="card" role="listitem">
+      <div class="cards">
+        <div class="card">
           <h3>Haircuts</h3>
-          <p>Women's haircuts-pop your individuality.</p>
-        </article>
-        <article class="card" role="listitem">
+          <p>Women’s haircuts — tailored to your individuality.</p>
+        </div>
+        <div class="card">
           <h3>Coloring</h3>
-          <p>Balayage, highlights, ombre-gentle techniques with care.</p>
-        </article>
-        <article class="card" role="listitem">
+          <p>Balayage, highlights, ombre — safe techniques with gentle care.</p>
+        </div>
+        <div class="card">
           <h3>Styling</h3>
-          <p>Daily and festive styling such as: curls, braids, and retro looks that are made fast and perfect.</p>
-        </article>
+          <p>Daily and festive styling: curls, braids, and retro looks.</p>
+        </div>
       </div>
     </section>
-<!--Examples of haircuts updated-->
+    <!-- Price List -->
+    <section class="price-list container" aria-labelledby="price-title">
+      <h2 id="price-title">Price List</h2>
+      <label class="dyslexia-toggle">
+        <input type="checkbox" id="dyslexiaMode">
+        <span> Dyslexia-friendly mode</span>
+      </label>
+
+      <ul class="price-items">
+        <li><span>Balayage</span><span>€150–€220</span></li>
+        <li><span>Full Colour</span><span>€90–€140</span></li>
+        <li><span>Roots Refresh</span><span>€65–€85</span></li>
+        <li><span>Extensions</span><span>from €180</span></li>
+        <li><span>Maintenance</span><span>€70–€110</span></li>
+        <li><span>Deep Repair Mask</span><span>€35</span></li>
+        <li><span>Blow-Dry and Style</span><span>€28–€45</span></li>
+        <li><span>Highlights</span><span>€40–€55</li>
+      </ul>
+
+      <p class="price-note">* Final price may vary after consultation.</p>
+    </section>
+
     <section id="gallery" class="section gallery container">
-      <h2>Gallery</h2>
-      <div class="gallery-grid" role="list">
-        <img role="listitem" src="images/jessie-dee-dabrowski-www-jessiedee-net-W6cwaL7PMSw-unsplash.jpg" alt="Soft layered haircut example">
-        <img role="listitem" src="images/pia-rohrer-k25Pu1i5TOU-unsplash.jpg" alt="Coloring result: warm balayage">
-        <img role="listitem" src="images/oktavianus-mulyadi-0LUGSiyIGnc-unsplash.jpg" alt="Curly styling for event">
-      </div>
-    </section>
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="images/caesar-akbar-0dhhHEKCyes-unsplash.jpg" alt="Work example 1">
+    <img src="images/oktavianus-mulyadi-0LUGSiyIGnc-unsplash.jpg" alt="Work example 2">
+    <img src="images/jessie-dee-dabrowski-www-jessiedee-net-W6cwaL7PMSw-unsplash.jpg" alt="Work example 3"
+  </div>
+</section>
 
     <section id="about" class="section about container">
       <h2>About Us</h2>
-      <p>We are a small cozy salon. Gentle approach to hair, experienced stylists and personalized consultations. Come and let's create your perfect look together!.</p>
+      <p>We are a small cozy salon. Gentle approach to hair, experienced stylists and personalized consultations. Come and let’s create your perfect look together.</p>
     </section>
 
     <section id="contact" class="section contact container">
       <h2>Contact</h2>
-      <address class="content" style="font-style: normal;">
-        Address: Abbey Street, 10<br>
-        Phone: <a href="tel:+35386210007">+353 86 210 0007</a><br>
-        Email: <a href="mailto:info@enchantedlocks.ie">info@enchantedlocks.ie</a>
-      </address>
-<!--Booking with the hairstylist-->
-      <form id="contactForm" class="contact-form" novalidate aria-describedby="formHelp">
-        <label for="name">Name
-          <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" />
+      <p>Address: Abbey Street, 10<br>Phone: <a href="tel:+353800000000">+353 80 000 0000</a><br>Email: info@enchantedlocks.ie</p>
+
+      <form id="contactForm" class="contact-form">
+        <label>Name
+          <input type="text" name="name" required>
         </label>
-
-        <label for="phone">Phone
-          <input type="tel" id="phone" name="phone" required aria-required="true" inputmode="tel" autocomplete="tel" />
+        <label>Phone
+          <input type="tel" name="phone" required>
+          </label>
+        <label>Message
+          <textarea name="message" rows="4"></textarea>
         </label>
-
-        <label for="message">Message
-          <textarea id="message" name="message" rows="4" aria-describedby="msgHelp"></textarea>
-        </label>
-
-        <p class="help" id="formHelp">We’ll call you back to confirm details.</p>
-        <p class="help" id="msgHelp">Optional. Tell us a preferred time or service.</p>
-
         <button type="submit" class="btn-primary">Send</button>
       </form>
     </section>
-  </main>
-  <footer class="site-footer" role="contentinfo">
+  <section class="hours section container">
+  <h2>Opening Hours</h2>
+  <p>
+    Mon – Fri: 9:00 AM – 6:00 PM<br>
+    Saturday: 10:00 AM – 4:00 PM<br>
+    Sunday: Closed
+  </p>
+  </section>
+
+  <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Enchanted Locks—All rights reserved</p>
+      <p>© <span id="year"></span> Enchanted Hair — All rights reserved</p>
     </div>
   </footer>
 
-  <!-- Reading ruler overlay -->
-  <div class="reading-ruler" id="ruler" aria-hidden="true"></div>
-
-  <script src="scripts/script.js"></script>
+  <script src="script.js"></script>
+    <script>
+document.getElementById('dyslexiaMode').addEventListener('change', e=>{
+  document.querySelector('.price-list').classList.toggle('dyslexia', e.target.checked);
+});
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
