@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Enchanted Locks</title>
   <style>
-    
     body {
       background-color: #ffd9da;
       font-family: Arial, sans-serif;
@@ -13,8 +12,9 @@
       padding: 0;
       text-align: center;
       color: #333;
+    }
 
-      nav {
+    nav {
       background-color: #F45B69;
       padding: 10px 0;
     }
@@ -22,9 +22,8 @@
     nav a {
       color: white;
       margin: 0 15px;
-
     }
-  }
+
     h1 {
       font-size: 3rem;
       margin-top: 40px;
@@ -56,33 +55,69 @@
       color: #555;
     }
 
+    form {
+      margin-top: 20px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #F45B69;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+    }
   </style>
 </head>
 
 <body>
 
-</body>
   <nav>
     <a href="index.html">Home</a>
     <a href="#">Contact</a>
     <a href="about.html">About</a>
   </nav>
 
-   
-<header>
+  <header>
     <h1>Contact Us</h1>
     <p>We are here to help with any questions or appointments</p>
-</header>
+  </header>
 
   <main>
-   <section class="contact">
-   <h2>Get in Touch</h2>
-   <p><strong>Phone:</strong> 0897685463</p>
-   <p><strong>Email:</strong> info@enchantedlocks.com</p>
-  </section>
+    <section class="contact">
+      <h2>Get in Touch</h2>
+      <p><strong>Phone:</strong> 0897685463</p>
+      <p><strong>Email:</strong> info@enchantedlocks.com</p>
+      <p><strong>Address:</strong> 67 Alleyway Street, Storybrook</p>
+
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
   <footer>
     <p>&copy; 2025 Enchanted Locks</p>
   </footer>
-     
+
 </body>
 </html>
