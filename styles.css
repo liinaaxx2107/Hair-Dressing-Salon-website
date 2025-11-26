@@ -42,6 +42,7 @@ body{
   display:inline-block;
   background:var(--accent);
   color:white;
+  text-shadow: 0 0.05em #000000;
   padding:10px 16px;
   border-radius:12px;
   text-decoration:none;
@@ -112,7 +113,8 @@ input,textarea{padding:10px;border-radius:8px;border:1px solid #eee;background:w
 /* Soft, readable buttons for navigation (no visual overload) */
 .btn--nav {
   background-color: rgba(255, 141, 161, 0.15);
-  color: #333;
+  color: #000000;
+  text-shadow: 0 0.05em #ffffff; 
   border: 1.5px solid rgba(255, 141, 161, 0.4);
   transition: all 0.3s ease;
 }
@@ -150,7 +152,10 @@ input,textarea{padding:10px;border-radius:8px;border:1px solid #eee;background:w
 
 .price-list h2 {
   text-align: center;
-  color: #ff6f91;
+  color: rgb(33, 33, 33);
+  text-shadow: 0 0.05em #ffc2d0;
+  text-decoration: underline;
+  text-decoration-color: #ff6f91;
 }
 
 .price-items {
