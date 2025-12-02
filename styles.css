@@ -142,20 +142,21 @@ body{
   min-width:220px;
 }
 
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-top:18px;
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
-.gallery-grid img{
-  width:100%;
-  aspect-ratio: 1 / 1;
-  object-fit:cover;
-  border-radius:10px;
-  display:block;
+.gallery-grid img {
+  width: 100%;
+  max-width: 200px; /* adjust: 150px, 180px, 220px */
+  height: auto;
+  border-radius: 10px;
+  display: block;
 }
+
 
 .contact-form{
   display:flex;
@@ -303,3 +304,4 @@ textarea{
   line-height: 1.8;
   transition: 0.3s ease;
 }
+
