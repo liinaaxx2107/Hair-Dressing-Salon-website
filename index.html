@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Enchanted Locks—Hair Salon</title>
-  <meta name="description" content="Enchanted Locks — cozy hair salon: haircuts, coloring, styling. Book online." />
+  <meta name="description" content="Enchanted Locks—cozy hair salon: haircuts, coloring, styling. Book online." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      background-color: #fff7f7; /* pink background */
+      background-color: #ffe4e6; /* pink background */
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
@@ -51,8 +51,10 @@
 
     .gallery-grid img {
       width: 100%;
-      max-width: 300px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       border-radius: 10px;
+      display: block;
     }
 
     .btn-primary {
@@ -75,14 +77,15 @@
 <body>
   <header class="site-header">
     <nav class="nav container">
-      <div class="logo"><span class="logo-cursive"> Enchated </span> Locks </div>
+      <div class="logo"><span class="logo-cursive"> Enchanted </span> Locks</div>
       <ul class="nav-links">
         <li><a class="btn btn--nav" href="#services">Services</a></li>
         <li><a class="btn btn--nav" href="#gallery">Gallery</a></li>
         <li><a class="btn btn--nav" href="about.html">About</a></li>
-        <li><a class="btn btn--nav" href="#contact.html">Contact</a></li>
+        <li><a class="btn btn--nav" href="#contact">Contact</a></li>
+        <li><a class="btn btn--nav" href="our-reviews.html">Reviews</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     </nav>
 
     <div class="hero">
@@ -108,10 +111,11 @@
         </div>
         <div class="card">
           <h3>Styling</h3>
-          <p>Daily and festive styling: curls, braids, and retro looks.</p>
+          <p>Daily and festive styling: curls, braids and retro looks.</p>
         </div>
       </div>
     </section>
+
     <!-- Price List -->
     <section class="price-list container" aria-labelledby="price-title">
       <h2 id="price-title">Price List</h2>
@@ -128,53 +132,45 @@
         <li><span>Maintenance</span><span>€70–€110</span></li>
         <li><span>Deep Repair Mask</span><span>€35</span></li>
         <li><span>Blow-Dry and Style</span><span>€28–€45</span></li>
-        <li><span>Highlights</span><span>€40–€55</li>
+        <li><span>Highkights</span><span>€40–€55</span></li>
       </ul>
 
       <p class="price-note">* Final price may vary after consultation.</p>
     </section>
 
     <section id="gallery" class="section gallery container">
-  <h2>Gallery</h2>
-  <div class="gallery-grid">
-    <img src="images/caesar-akbar-0dhhHEKCyes-unsplash.jpg" alt="Work example 1">
-    <img src="images/oktavianus-mulyadi-0LUGSiyIGnc-unsplash.jpg" alt="Work example 2">
-    <img src="images/jessie-dee-dabrowski-www-jessiedee-net-W6cwaL7PMSw-unsplash.jpg" alt="Work example 3"
-  </div>
-</section>
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/caesar-akbar-0dhhHEKCyes-unsplash.jpg" alt="Work example 1">
+        <img src="images/oktavianus-mulyadi-0LUGSiyIGnc-unsplash.jpg" alt="Work example 2">
+        <img src="images/jessie-dee-dabrowski-www-jessiedee-net-W6cwaL7PMSw-unsplash.jpg" alt="Work example 3">
+      </div>
+    </section>
 
-    
-<section class="hours section container">
-  <h2>Opening Hours</h2>
-  <p>
-    Mon – Fri: 9:00 AM – 6:00 PM<br>
-    Saturday: 10:00 AM – 4:00 PM<br>
-    Sunday: Closed
-  </p>
-  </section>
+    <section class="hour section container">
+      <h2>Opening Hours</h2>
+      <p>
+        Mon – Fri: 9:00 AM – 6:00 PM<br>
+        Saturday: 10:00 AM – 4:00 PM<br>
+        Sunday: Closed
+      </p>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Enchanted Locks</p>
+      <p>© <span id="year"></span> Enchanted Locks Locks</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
-    <script>
-document.getElementById('dyslexiaMode').addEventListener('change', e=>{
-  document.querySelector('.price-list').classList.toggle('dyslexia', e.target.checked);
-});
-</script>
+  <script>
+    const dyslexiaToggle = document.getElementById('dyslexiaMode');
+    if (dyslexiaToggle) {
+      dyslexiaToggle.addEventListener('change', e => {
+        document.querySelector('.price-list')?.classList.toggle('dyslexia', e.target.checked);
+      });
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
