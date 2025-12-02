@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Reviews — Enchanted Locks</title>
+  <meta name="description" content="Client reviews for Enchanted Locks Hair Salon. Real feedback from happy customers." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .reviews-section {
+      padding: 40px 0;
+    }
+
+    .review-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+    }
+
+    .review-author {
+      font-weight: 600;
+      margin-top: 12px;
+      color: var(--accent-dark);
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <nav class="nav container">
+    <div class="logo"><span class="logo-cursive"> Enchanted </span> Locks</div>
+
+    <ul class="nav-links">
+      <li><a class="btn btn--nav" href="index.html#services">Services</a></li>
+      <li><a class="btn btn--nav" href="index.html#gallery">Gallery</a></li>
+      <li><a class="btn btn--nav" href="about.html">About</a></li>
+      <li><a class="btn btn--nav" href="index.html#contact">Contact</a></li>
+      <li><a class="btn btn--nav" href="our-reviews.html">Reviews</a></li>
+    </ul>
+
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<main class="container reviews-section">
+  <h1 style="text-align:center;">Our Reviews</h1>
+  <p style="text-align:center;color:var(--muted);max-width:650px;margin:0 auto 30px;">
+    See what our wonderful clients say about their experience at Enchanted Locks.
+  </p>
+
+  <div class="review-card">
+    <p>“Absolutely amazing service done by Nina! I got balayage done and the result was even better than I even imagined.”</p>
+    <div class="review-author">— Sarah M.</div>
+  </div>
+
+  <div class="review-card">
+    <p>“Such a friendly atmosphere. My haircut was done exactly as a said it to be, this is the most important for me-actually listening to the client.”</p>
+    <div class="review-author">— Julia R.</div>
+  </div>
+
+  <div class="review-card">
+    <p>“The best salon experience I’ve ever had. They do it with care.”</p>
+    <div class="review-author">— Emily K.</div>
+  </div>
+
+  <div class="review-card">
+    <p>“Beautiful pink interior,professional staff, and amazing results. Highly recommend this place.”</p>
+    <div class="review-author">— Chloe W.</div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Enchanted Locks</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
