@@ -15,22 +15,6 @@ if (navToggle && navLinks) {
   });
 }
 
-// Contact form demo (no real backend)
-const form = document.getElementById('contactForm');
-if (form) {
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = this.name.value.trim();
-    const phone = this.phone.value.trim();
-    if(!name || !phone){
-      alert('Please provide your name and phone.');
-      return;
-    }
-    alert('Thank you! We received your request. (Demo only — connect to email service later.)');
-    this.reset();
-  });
-}
-
 //  Smooth scroll for internal page sections
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -57,3 +41,47 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+// New validation for Nina's Accessibility Form
+const enhancedForm = document.getElementById('enhancedContactForm');
+
+if (enhancedForm) {
+  enhancedForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    let valid = true;
+
+    const fields = ['name', 'email', 'service', 'inquiry'];
+    fields.forEach(id => {
+      const input = document.getElementById(id);
+      const error = input.nextElementSibling;
+
+      if (!input.value.trim()) {
+        error.textContent = 'This field is required.';
+        error.style.color = 'red';
+        error.style.fontSize = '0.9rem';
+        error.style.marginTop = '3px';
+        valid = false;
+      } else {
+        error.textContent = '';
+      }
+    });
+
+    // Email format validation
+    const emailField = document.getElementById('email');
+    const emailError = emailField.nextElementSibling;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailField.value && !emailPattern.test(emailField.value)) {
+      emailError.textContent = 'Please enter a valid email.';
+      emailError.style.color = 'red';
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    alert('Your message has been sent! (Demo only)');
+    enhancedForm.reset();
+  });
+}
+
+
