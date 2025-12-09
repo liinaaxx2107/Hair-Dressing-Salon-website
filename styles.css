@@ -304,4 +304,11 @@ textarea{
   line-height: 1.8;
   transition: 0.3s ease;
 }
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  min-height: 16px;
+}
+
+
 
